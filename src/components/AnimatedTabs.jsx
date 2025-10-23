@@ -1,43 +1,46 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
- 
+
+import "./animatedTabs.css";
+
 let tabs = [
-  { id: "world", label: "World" },
-  { id: "ny", label: "N.Y." },
-  { id: "business", label: "Business" },
-  { id: "arts", label: "Arts" },
-  { id: "science", label: "Science" },
+  { id: 1, label: "About Me" },
+  { id: 2, label: "Experiences" },
+  { id: 3, label: "Recomended" },
 ];
 
 function AnimatedTabs() {
   let [activeTab, setActiveTab] = useState(tabs[0].id);
 
   return (
-    <div className="flex space-x-1">
-      {tabs.map((tab) => (
-        <button
-          key={tab.id}
-          onClick={() => setActiveTab(tab.id)}
-          className={`${
-            activeTab === tab.id ? "" : "hover:text-white/60"
-          } relative rounded-full px-3 py-1.5 text-sm font-medium text-white outline-sky-400 transition focus-visible:outline-2`}
-          style={{
-            WebkitTapHighlightColor: "transparent",
-          }}
-        >
-          {activeTab === tab.id && (
-            <motion.span
-              layoutId="bubble"
-              className="absolute inset-0 z-10 bg-white mix-blend-difference"
-              style={{ borderRadius: 9999 }}
-              transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-            />
-          )}
-          {tab.label}
-        </button>
-      ))}
+    <div className="AnimatedTabs">
+      <div className="flex space-x-1">
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`${
+              activeTab === tab.id ? "activeTab" : "hover:text-white/60"
+            } relative rounded-full px-3 py-1.5 text-sm/8 font-medium text-white outline-sky-400 transition focus-visible:outline-2 h-[50px] w-[200px]`}
+            style={{
+              WebkitTapHighlightColor: "transparent",
+            }}
+          >
+            {activeTab === tab.id && (
+              <motion.span
+                layoutId="bubble"
+                className="absolute inset-0 z-10 bg-white"
+                style={{ borderRadius: 9999 }}
+                transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+              >
+              </motion.span>
+            )}
+            {tab.label}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
 
-export default AnimatedTabs
+export default AnimatedTabs;

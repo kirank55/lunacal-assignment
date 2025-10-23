@@ -7,6 +7,7 @@
 .content{
     display: flex;
     justify-content: center;
+    margin: 4em 0;
 }
 .empty-space {
   min-height: 689px;
@@ -24,7 +25,11 @@
     max-width: 500px;
 
   background: #363C43;
-  /* background: red; */
   border: 1px solid #96bee7;
   border-radius: 27px;
+}
+
+.animated-tabs-section{
+    /* background: red; */
+    height: 200px
 }
