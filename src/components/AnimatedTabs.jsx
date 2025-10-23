@@ -29,13 +29,13 @@ function AnimatedTabs() {
             {activeTab === tab.id && (
               <motion.span
                 layoutId="bubble"
-                className="absolute inset-0 z-10 bg-white"
-                style={{ borderRadius: 9999 }}
+                className="absolute inset-0 z-10 bubble"
+                style={{ borderRadius: 16 }}
                 transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
               >
               </motion.span>
             )}
-            {tab.label}
+            <span className="relative z-20">{tab.label}</span>
           </button>
         ))}
       </div>

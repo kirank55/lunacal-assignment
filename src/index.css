@@ -6,13 +6,12 @@
 *::after,
 *::before{
   box-sizing: border-box;
-
-
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 500;
   font-style: normal;
+  font-size: 18px;
 }
