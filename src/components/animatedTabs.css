@@ -1,5 +1,6 @@
 .AnimatedTabs {
-    padding: .5em;
+    margin: .5em 0;
+    padding: 0 .5em .75em .5em;
     
     background: #171717;
     /* box-shadow: inset 0px 4.96001px 12.4px 2.48px rgba(0, 0, 0, 0.25); */
@@ -7,6 +8,7 @@
     
     color: #A3ADB2;
     /* background: red; */
+    width: fit-content;
     
     
 }
