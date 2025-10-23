@@ -35,7 +35,41 @@ function AnimatedTabs() {
               >
               </motion.span>
             )}
-            <span className="relative z-20">{tab.label}</span>
+            <motion.div 
+              className="absolute z-20 overflow-hidden flex items-center justify-center"
+              style={{ 
+                borderRadius: 16,
+                height: '50px',
+                width: '157.462px',
+                top: 0,
+                left: 0
+              }}
+              initial="initial"
+              whileHover={activeTab !== tab.id ? "hover" : "initial"}
+              variants={{
+                initial: {},
+                hover: {}
+              }}
+            >
+              <motion.div
+                className="absolute inset-0 bg-gray-600/30"
+                style={{ 
+                  borderRadius: 16,
+                  height: '50px',
+                  width: '157.462px'
+                }}
+                variants={{
+                  initial: { x: "-100%" },
+                  hover: { x: "0%" }
+                }}
+                transition={{ 
+                  type: "spring", 
+                  bounce: 0.2, 
+                  duration: 0.6 
+                }}
+              />
+              <span className="relative z-10">{tab.label}</span>
+            </motion.div>
           </button>
         ))}
       </div>
