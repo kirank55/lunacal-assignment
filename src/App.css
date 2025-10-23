@@ -1,0 +1,30 @@
+.app {
+  background: linear-gradient(180deg, #373e44 -100%, #191b1f 100%);
+  box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 28px;
+  min-height: 80vh;
+}
+.content{
+    display: flex;
+    justify-content: center;
+}
+.empty-space {
+  min-height: 689px;
+
+  background: rgba(97, 97, 97, 0.82);
+  border: 1px solid #96bee7;
+  border-radius: 27px;
+  width: 45%;
+  max-width: 500px;
+}
+
+.assignment-content {
+    min-height: 689px;
+    width: 45%;
+    max-width: 500px;
+
+  background: #363C43;
+  /* background: red; */
+  border: 1px solid #96bee7;
+  border-radius: 27px;
+}
