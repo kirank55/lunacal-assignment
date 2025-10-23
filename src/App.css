@@ -4,32 +4,118 @@
   border-radius: 28px;
   min-height: 80vh;
 }
-.content{
-    display: flex;
-    justify-content: center;
-    margin: 4em 0;
+.content {
+  display: flex;
+  justify-content: center;
+  margin: 4em 0;
 }
 .empty-space {
   min-height: 689px;
 
   background: rgba(97, 97, 97, 0.82);
-  border: 1px solid #96bee7;
   border-radius: 27px;
   width: 45%;
-  max-width: 500px;
+  max-width: 700px;
 }
 
 .assignment-content {
-    min-height: 689px;
-    width: 45%;
-    max-width: 500px;
+  min-height: 689px;
+  width: 45%;
+  max-width: 700px;
+  /* background: red; */
 
-  background: #363C43;
-  border: 1px solid #96bee7;
   border-radius: 27px;
 }
 
-.animated-tabs-section{
-    /* background: red; */
-    height: 200px
+.animated-tabs-container{
+  display: flex;
+  background: #363c43;
+  height: 350px;
+  padding: 20px;
+  border-radius: 18px;
+  justify-content: space-between;
 }
+
+.animated-tabs-section {
+  background: #363c43;
+  /* margin: 20px; */
+  /* box-shadow: 5.67px 5.67px 3.78px 0px #00000066; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.tabs-wrapper {
+  width: 600px;
+  margin: 10px 0;
+}
+
+.tabs-content-area {
+  flex: 1;
+  background: rgba(97, 97, 97, 0.12);
+  border-radius: 12px;
+  padding: 20px;
+  color: #969696;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.2px;
+  text-align: left;
+  overflow-y: auto;
+}
+
+/* Custom scrollbar styles */
+.tabs-content-area::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tabs-content-area::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.tabs-content-area::-webkit-scrollbar-thumb {
+  background: #4A4E54;
+  border-radius: 4px;
+  border: 1px solid #6B6B6B;
+}
+
+.tabs-content-area::-webkit-scrollbar-thumb:hover {
+  background: #5A5E64;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 10px;
+  align-items: flex-start;
+  border-radius: 8px;
+  width: 150px;
+  height: 100%;
+}
+
+.question-mark-icon {
+  width: 64px;
+  height: 24px;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  filter: brightness(1.2);
+}
+
+
+
+.six-boxes-icon {
+  width: 64px;
+  height: 34px;
+  margin-top: 5em;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  filter: brightness(1.2);
+}
+
+

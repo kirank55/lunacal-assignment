@@ -14,4 +14,6 @@ body {
   font-weight: 500;
   font-style: normal;
   font-size: 18px;
+  background: linear-gradient(180deg, #373e44 -100%, #191b1f 100%);
+
 }
