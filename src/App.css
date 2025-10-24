@@ -123,6 +123,9 @@
   filter: brightness(1.2);
 }
 
+.animated-carousel-section {
+  margin-top: 20px;
+}
 
 @media(max-width:1550px){
   .assignment-content {

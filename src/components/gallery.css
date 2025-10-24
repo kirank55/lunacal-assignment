@@ -1,0 +1,268 @@
+.gallery-main-container {
+  display: flex;
+  background: #363c43;
+  height: 350px;
+  padding: 20px;
+  border-radius: 18px;
+  justify-content: space-between;
+  position: relative;
+  contain: layout;
+}
+
+.gallery-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 10px;
+  align-items: flex-start;
+  border-radius: 8px;
+  width: 100px;
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.gallery-icons .question-mark-icon {
+  width: 64px;
+  height: 24px;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  filter: brightness(1.2);
+}
+
+.gallery-icons .six-boxes-icon {
+  width: 64px;
+  height: 34px;
+  margin-top: 5em;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  filter: brightness(1.2);
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  background: #363c43;
+  gap: 20px;
+  position: relative;
+  flex: 1;
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.gallery-title {
+  background: #171717;
+  color: #ffffff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 12px 28px;
+  border-radius: 20px;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.5);
+  margin-left: 0.5em;
+}
+
+.gallery-btn {
+  background: #171717;
+  color: #ffffff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.gallery-btn:hover {
+  background: #1f1f1f;
+}
+
+.gallery-controls {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.add-image-btn {
+  background: #363c43;
+  color: #ffffff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 104px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5), inset 0px 3px 8px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.add-image-btn:hover {
+  background: #404650;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6), inset 0px 3px 8px rgba(255, 255, 255, 0.15);
+}
+
+.add-image-btn:active {
+  transform: scale(0.98);
+}
+
+.navigation-arrows {
+  display: flex;
+  gap: 15px;
+}
+
+.arrow-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(139.14deg, #303439 12.4%, #161718 94.96%);
+  border: none;
+  color: #6f787c;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 4px 5px 30px 5px #101213, -5px -3px 30px -10px #96BEE7;
+}
+
+.arrow-btn:hover:not(:disabled) {
+  color: #ffffff;
+  box-shadow: 4px 5px 35px 8px #101213, -5px -3px 35px -8px #96BEE7;
+}
+
+.arrow-btn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.arrow-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.gallery-images {
+  display: flex;
+  padding: 10px;
+  overflow: hidden;
+  flex: 1;
+  position: relative;
+}
+
+.gallery-images-track {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.gallery-image-wrapper {
+  flex: 0 0 calc(33.333% - 13.333px);
+  min-width: calc(33.333% - 13.333px);
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #1a1a1a;
+  transition: transform 0.3s ease;
+}
+
+.gallery-image-wrapper:hover {
+  transform: scale(1.02);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.gallery-image-wrapper:hover .gallery-image {
+  filter: grayscale(0%);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .gallery-main-container {
+    height: auto;
+    min-height: 300px;
+  }
+
+  .gallery-icons {
+    width: 50px;
+    padding: 10px 5px;
+  }
+
+  .gallery-icons .question-mark-icon,
+  .gallery-icons .six-boxes-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .gallery-icons .six-boxes-icon {
+    margin-top: 40px;
+  }
+
+  .gallery-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .gallery-controls {
+    width: 100%;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .add-image-btn {
+    font-size: 10px;
+    padding: 12px 18px;
+  }
+
+  .arrow-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .gallery-images {
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .gallery-image-wrapper {
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .navigation-arrows {
+    gap: 10px;
+  }
+
+  .arrow-btn {
+    width: 35px;
+    height: 35px;
+  }
+
+  .arrow-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}
