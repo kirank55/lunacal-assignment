@@ -1,58 +1,61 @@
 import { useState } from "react";
-import questionMarkIcon from "../assets/questionMark.svg";
-import sixBoxesIcon from "../assets/6boxes.svg";
-import galleryImg from "../assets/galleryimg.png";
+import Sidebar from "../Sidebar";
 
+import galleryImg from "../../assets/galleryimg.png";
 import "./gallery.css";
 
 const GallaryCarousel = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
   const createPlaceholder = () => galleryImg;
 
+  // Initialize gallary with 4 images
   const [images, setImages] = useState([
-    createPlaceholder(0),
-    createPlaceholder(1),
-    createPlaceholder(2),
-    createPlaceholder(3),
+    createPlaceholder(),
+    createPlaceholder(),
+    createPlaceholder(),
+    createPlaceholder(),
   ]);
-  const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Add a new image to the gallery
   const handleAddImage = () => {
-    const newImage = createPlaceholder(images.length);
-    setImages([...images, newImage]);
+    const newImage = createPlaceholder();
+    setImages((prevImages) => [...prevImages, newImage]);
   };
 
+  // Navigate to previous images
   const handlePrevious = () => {
     if (currentIndex > 0) {
+      // Slide the carousel if there are any hidden images on the right side of the carousel
       setCurrentIndex(currentIndex - 1);
     }
   };
 
+  const checkImagesonRHS = () => currentIndex < images.length - 3;
+
+  // Navigate to next images
   const handleNext = () => {
-    if (currentIndex < images.length - 3) {
-      setCurrentIndex(currentIndex + 1);
-    }
+    // No images to show.
+    if (!checkImagesonRHS()) return;
+
+    // Slide the carousel if there are any hidden images on the right side of the carousel
+    setCurrentIndex(currentIndex + 1);
   };
 
   return (
     <div className="animated-carousel-section">
       <div className="gallery-main-container">
-        <div className="icons">
-          <img
-            src={questionMarkIcon}
-            alt="Question Mark"
-            className="question-mark-icon"
-          />
-          <img src={sixBoxesIcon} alt="Six Boxes" className="six-boxes-icon" />
-        </div>
-
+        <Sidebar />
         <div className="gallery-container">
+          {/* Gallery header with title and controls */}
           <div className="gallery-header">
             <div className="gallery-title">Gallery</div>
             <div className="gallery-controls">
               <button className="add-image-btn" onClick={handleAddImage}>
                 + ADD IMAGE
               </button>
+              {/* Navigation arrows */}
               <div className="navigation-arrows">
+                {/* Previous button - disabled at start */}
                 <button
                   className="arrow-btn"
                   onClick={handlePrevious}
@@ -74,10 +77,11 @@ const GallaryCarousel = () => {
                     />
                   </svg>
                 </button>
+                {/* Next button - disabled at end */}
                 <button
                   className="arrow-btn"
                   onClick={handleNext}
-                  disabled={currentIndex >= images.length - 3}
+                  disabled={!checkImagesonRHS()}
                 >
                   <svg
                     width="24"
@@ -99,7 +103,9 @@ const GallaryCarousel = () => {
             </div>
           </div>
 
+          {/* Image carousel - shows 3 images at a time */}
           <div className="gallery-images">
+            {/* Track slides horizontally based on currentIndex */}
             <div
               className="gallery-images-track"
               style={{

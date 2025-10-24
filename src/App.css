@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 6em auto;
+  margin: 4em auto;
 }
 .empty-space {
   min-height: 689px;

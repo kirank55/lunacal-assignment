@@ -16,14 +16,14 @@ export const TAB_CONTENT = {
   2: {
     title: "Experiences",
     content: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam suscipit quibusdam voluptates veritatis cumque, nesciunt odit commodi magni praesentium a porro, tempore recusandae nihil reprehenderit rerum numquam eos vitae deleniti facilis dicta. Saepe harum illum nemo excepturi temporibus earum tenetur! Laborum eligendi recusandae minus atque id reprehenderit dignissimos nam.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam suscipit quibusdam voluptates veritatis cumque, nesciunt odit commodi magni praesentium a porro",
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam suscipit quibusdam voluptates veritatis cumque, nesciunt odit commodi magni praesentium a porro, tempore recusandae nihil reprehenderit rerum numquam eos vitae deleniti facilis dicta. Saepe harum illum nemo excepturi temporibus earum tenetur! Laborum eligendi recusandae minus atque id reprehenderit dignissimos nam.",
     ],
   },
   3: {
     title: "Recommended",
     content: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam suscipit quibusdam voluptates veritatis cumque, nesciunt odit commodi magni praesentium a porro, tempore recusandae nihil reprehenderit rerum numquam eos vitae deleniti facilis dicta. Saepe harum illum nemo excepturi temporibus earum tenetur! Laborum eligendi recusandae minus atque id reprehenderit dignissimos nam.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam suscipit quibusdam voluptates veritatis cumque, nesciunt odit commodi magni praesentium a porro",
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam suscipit quibusdam voluptates veritatis cumque, nesciunt odit commodi magni praesentium a porro, tempore recusandae nihil reprehenderit rerum numquam eos vitae deleniti facilis dicta. Saepe harum illum nemo excepturi temporibus earum tenetur! Laborum eligendi recusandae minus atque id reprehenderit dignissimos nam.",
     ],
   },

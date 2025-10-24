@@ -1,6 +1,6 @@
 import "./App.css";
-import TabsContainer from "./components/TabsContainer";
-import GallaryCarousel from "./components/GallaryCarousel";
+import TabsContainer from "./components/TabsContainer/TabsContainer";
+import GallaryCarousel from "./components/GallaryCarousel/GallaryCarousel";
 
 function App() {
   return (
