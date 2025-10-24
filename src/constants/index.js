@@ -2,10 +2,9 @@
 export const TABS = [
   { id: 1, label: "About Me" },
   { id: 2, label: "Experiences" },
-  { id: 3, label: "Recommended" }, // Fixed typo
+  { id: 3, label: "Recommended" },
 ];
 
-// Tab content data
 export const TAB_CONTENT = {
   1: {
     title: "About Me",
@@ -17,24 +16,15 @@ export const TAB_CONTENT = {
   2: {
     title: "Experiences",
     content: [
-      "I have extensive experience in sales and customer relationship management.",
-      "Over the years, I've worked with various clients and helped them achieve their business goals through innovative solutions.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam suscipit quibusdam voluptates veritatis cumque, nesciunt odit commodi magni praesentium a porro, tempore recusandae nihil reprehenderit rerum numquam eos vitae deleniti facilis dicta. Saepe harum illum nemo excepturi temporibus earum tenetur! Laborum eligendi recusandae minus atque id reprehenderit dignissimos nam.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam suscipit quibusdam voluptates veritatis cumque, nesciunt odit commodi magni praesentium a porro, tempore recusandae nihil reprehenderit rerum numquam eos vitae deleniti facilis dicta. Saepe harum illum nemo excepturi temporibus earum tenetur! Laborum eligendi recusandae minus atque id reprehenderit dignissimos nam.",
     ],
   },
   3: {
     title: "Recommended",
     content: [
-      "Here are some recommendations and testimonials from my clients.",
-      "I've been consistently rated 5 stars by my clients for my dedication and results-driven approach.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam suscipit quibusdam voluptates veritatis cumque, nesciunt odit commodi magni praesentium a porro, tempore recusandae nihil reprehenderit rerum numquam eos vitae deleniti facilis dicta. Saepe harum illum nemo excepturi temporibus earum tenetur! Laborum eligendi recusandae minus atque id reprehenderit dignissimos nam.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam suscipit quibusdam voluptates veritatis cumque, nesciunt odit commodi magni praesentium a porro, tempore recusandae nihil reprehenderit rerum numquam eos vitae deleniti facilis dicta. Saepe harum illum nemo excepturi temporibus earum tenetur! Laborum eligendi recusandae minus atque id reprehenderit dignissimos nam.",
     ],
-  },
-};
-
-// Animation configuration
-export const ANIMATION_CONFIG = {
-  spring: {
-    type: "spring",
-    bounce: 0.2,
-    duration: 0.6,
   },
 };

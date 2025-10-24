@@ -1,16 +1,21 @@
-import './App.css';
-import Layout from './components/Layout';
-import TabsContainer from './components/TabsContainer';
-import Gallery from './components/Gallery';
+import "./App.css";
+import TabsContainer from "./components/TabsContainer";
+import GallaryCarousel from "./components/GallaryCarousel";
 
 function App() {
   return (
-    <Layout>
-      <TabsContainer />
-      <div className="animated-carousel-section">
-        <Gallery />
+    <div className="app">
+      <div className="container mx-auto">
+        <div className="content">
+          <div className="empty-space"></div>
+          {/* Assignment Content Starts from here */}
+          <div className="assignment-content">
+            <TabsContainer />
+            <GallaryCarousel />
+          </div>
+        </div>
       </div>
-    </Layout>
+    </div>
   );
 }
 

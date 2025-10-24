@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { TABS, ANIMATION_CONFIG } from '../constants';
+import { motion as Motion } from "framer-motion";
+import { TABS } from '../constants';
 import "./animatedTabs.css";
 
 function AnimatedTabs({ activeTab, setActiveTab }) {
@@ -11,15 +11,14 @@ function AnimatedTabs({ activeTab, setActiveTab }) {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`${
-              activeTab === tab.id ? "activeTab" : "hover:text-white/60"
-            } relative rounded-full px-2 sm:px-3 py-1.5 text-xs sm:text-sm/8 font-medium text-white outline-sky-400 transition focus-visible:outline-2 h-8 sm:h-9 lg:h-10 w-24 sm:w-32 lg:w-44 xl:w-48`}
+            className={`${activeTab === tab.id ? "activeTab" : "hover:text-white/60"
+              } relative rounded-full px-2 sm:px-3 py-1.5 text-xs sm:text-sm/8 font-medium text-white outline-sky-400 transition focus-visible:outline-2 h-8 sm:h-9 lg:h-10 w-24 sm:w-32 lg:w-44 xl:w-48`}
             style={{
               WebkitTapHighlightColor: "transparent",
             }}
           >
             {activeTab === tab.id && (
-              <motion.span
+              <Motion.span
                 layoutId="bubble"
                 className="absolute inset-0 z-10 bubble rounded-2xl"
                 style={{
@@ -29,14 +28,18 @@ function AnimatedTabs({ activeTab, setActiveTab }) {
                   right: 0,
                   bottom: 0,
                 }}
-                transition={ANIMATION_CONFIG.spring}
+                transition={{
+                  type: "spring",
+                  bounce: 0.2,
+                  duration: 0.6,
+                }}
                 layout={false}
               >
-              </motion.span>
+              </Motion.span>
             )}
-            <motion.div 
+            <Motion.div
               className="absolute z-20 overflow-hidden flex items-center justify-center rounded-2xl"
-              style={{ 
+              style={{
                 height: '100%',
                 width: '100%',
                 top: 0,
@@ -49,9 +52,9 @@ function AnimatedTabs({ activeTab, setActiveTab }) {
                 hover: {}
               }}
             >
-              <motion.div
+              <Motion.div
                 className="absolute inset-0 bg-gray-600/30 rounded-2xl"
-                style={{ 
+                style={{
                   height: '100%',
                   width: '100%'
                 }}
@@ -59,10 +62,14 @@ function AnimatedTabs({ activeTab, setActiveTab }) {
                   initial: { x: "-100%" },
                   hover: { x: "0%" }
                 }}
-                transition={ANIMATION_CONFIG.spring}
+                transition={{
+                  type: "spring",
+                  bounce: 0.2,
+                  duration: 0.6,
+                }}
               />
               <span className="relative z-10">{tab.label}</span>
-            </motion.div>
+            </Motion.div>
           </button>
         ))}
       </div>
