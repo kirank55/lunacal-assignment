@@ -2,9 +2,7 @@
     margin: .5em 0;
     padding: 0 .5em .75em .5em;
     
-    background: #171717;
     /* box-shadow: inset 0px 4.96001px 12.4px 2.48px rgba(0, 0, 0, 0.25); */
-    border-radius: 23px;
     
     color: #A3ADB2;
     /* background: red; */
@@ -12,10 +10,31 @@
     
     
 }
+.AnimatedTabs .animated-buttons{
+    border-radius: 23px;
+    
+    background: #171717;
+    padding: 0 10px 10px 10px;
+}
+
+
 .AnimatedTabs button  {
 }
 .AnimatedTabs button span.bubble {
     background-color: #28292F;
     box-shadow: 7px 13px 20px 3px #000000, 20px 20px 67.4667px 8.43333px #0a0a0a;
     border-radius: 16px;
+}
+
+@media(max-width:768px){
+.AnimatedTabs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+}
+@media(max-width:576px){
+.AnimatedTabs{
+    justify-content: flex-start;
+}
 }

@@ -7,7 +7,7 @@ function App() {
   return (
     <div className='app'>
 
-      <div className="container">
+      <div className="container mx-auto">
         <div className="content">
           <div className="empty-space">
 
