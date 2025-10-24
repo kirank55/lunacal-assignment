@@ -7,7 +7,7 @@
     color: #A3ADB2;
     /* background: red; */
     width: fit-content;
-    
+    position: relative;
     
 }
 .AnimatedTabs .animated-buttons{
@@ -15,11 +15,10 @@
     
     background: #171717;
     padding: 0 10px 10px 10px;
+    position: relative;
+    contain: layout;
 }
 
-
-.AnimatedTabs button  {
-}
 .AnimatedTabs button span.bubble {
     background-color: #28292F;
     box-shadow: 7px 13px 20px 3px #000000, 20px 20px 67.4667px 8.43333px #0a0a0a;

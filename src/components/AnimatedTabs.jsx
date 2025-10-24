@@ -1,21 +1,13 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
-
+import { TABS, ANIMATION_CONFIG } from '../constants';
 import "./animatedTabs.css";
 
-let tabs = [
-  { id: 1, label: "About Me" },
-  { id: 2, label: "Experiences" },
-  { id: 3, label: "Recomended" },
-];
-
-function AnimatedTabs() {
-  let [activeTab, setActiveTab] = useState(tabs[0].id);
+function AnimatedTabs({ activeTab, setActiveTab }) {
 
   return (
     <div className="AnimatedTabs">
-      <div className="animated-buttons flex space-x-0.5 sm:space-x-1">
-        {tabs.map((tab) => (
+      <div className="animated-buttons flex space-x-0.5 sm:space-x-1" style={{ position: 'relative' }}>
+        {TABS.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
@@ -30,7 +22,15 @@ function AnimatedTabs() {
               <motion.span
                 layoutId="bubble"
                 className="absolute inset-0 z-10 bubble rounded-2xl"
-                transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                }}
+                transition={ANIMATION_CONFIG.spring}
+                layout={false}
               >
               </motion.span>
             )}
@@ -59,11 +59,7 @@ function AnimatedTabs() {
                   initial: { x: "-100%" },
                   hover: { x: "0%" }
                 }}
-                transition={{ 
-                  type: "spring", 
-                  bounce: 0.2, 
-                  duration: 0.6 
-                }}
+                transition={ANIMATION_CONFIG.spring}
               />
               <span className="relative z-10">{tab.label}</span>
             </motion.div>
