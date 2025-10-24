@@ -2,44 +2,19 @@ import { useState } from 'react';
 import './gallery.css';
 import questionMarkIcon from '../assets/questionMark.svg';
 import sixBoxesIcon from '../assets/6boxes.svg';
+import galleryImg from '../assets/galleryimg.png';
 
 const Gallery = () => {
-  // Create placeholder gradient images
+  // Create placeholder images
   const createPlaceholder = () => {
-    const canvas = document.createElement('canvas');
-    canvas.width = 400;
-    canvas.height = 400;
-    const ctx = canvas.getContext('2d');
-    
-    // Create gradient
-    const gradient = ctx.createLinearGradient(0, 0, 400, 400);
-    gradient.addColorStop(0, '#4a5568');
-    gradient.addColorStop(1, '#2d3748');
-    ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, 400, 400);
-    
-    // Add decorative lines
-    ctx.strokeStyle = '#cbd5e0';
-    ctx.lineWidth = 3;
-    for (let i = 0; i < 20; i++) {
-      ctx.beginPath();
-      ctx.moveTo(i * 40, 0);
-      ctx.lineTo(0, i * 40);
-      ctx.stroke();
-      
-      ctx.beginPath();
-      ctx.moveTo(400 - i * 40, 400);
-      ctx.lineTo(400, 400 - i * 40);
-      ctx.stroke();
-    }
-    
-    return canvas.toDataURL();
+    return galleryImg
   };
 
   const [images, setImages] = useState([
     createPlaceholder(0),
     createPlaceholder(1),
     createPlaceholder(2),
+    createPlaceholder(3),
   ]);
   const [currentIndex, setCurrentIndex] = useState(0);
 

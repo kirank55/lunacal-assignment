@@ -15,8 +15,9 @@
 
   background: rgba(97, 97, 97, 0.82);
   border-radius: 27px;
-  width: 40%;
+  width: 50%;
   max-width: 700px;
+  margin: 0 2em
 }
 
 .assignment-content {
